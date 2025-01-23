@@ -1,6 +1,28 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+
+rock.addEventListener("click", function () {
+  let humanSelection = "rock";
+  let computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+});
+
+paper.addEventListener("click", function () {
+  let humanSelection = "paper";
+  let computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+});
+
+scissors.addEventListener("click", function () {
+  let humanSelection = "scissors";
+  let computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+});
+
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3);
   switch (randomNumber) {
@@ -64,23 +86,23 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-function playGame() {
-  for (let i = 0; i < 5; i++) {
-    let humanSelection = getHumanChoice();
-    let computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-  }
-  if (humanScore > computerScore) {
-    console.log(
-      `Human wins the game! with a score of ${humanScore} to ${computerScore}`
-    );
-  } else if (humanScore < computerScore) {
-    console.log(
-      `Computer wins the game! with a score of ${computerScore} to ${humanScore}`
-    );
-  } else {
-    console.log("Its a tie! No one wins!");
-  }
-}
+// function playGame() {
+//   for (let i = 0; i < 5; i++) {
+//     let humanSelection = getHumanChoice();
+//     let computerSelection = getComputerChoice();
+//     playRound(humanSelection, computerSelection);
+//   }
+//   if (humanScore > computerScore) {
+//     console.log(
+//       `Human wins the game! with a score of ${humanScore} to ${computerScore}`
+//     );
+//   } else if (humanScore < computerScore) {
+//     console.log(
+//       `Computer wins the game! with a score of ${computerScore} to ${humanScore}`
+//     );
+//   } else {
+//     console.log("Its a tie! No one wins!");
+//   }
+// }
 
-playGame();
+// playGame();
