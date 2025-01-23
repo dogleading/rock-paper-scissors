@@ -1,0 +1,54 @@
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: hover 0.3s;
+}
+
+button:hover {
+  background-color: #007bff;
+  opacity: 0.8;
+}
+
+.result {
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 5rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+
+.reset-container {
+  display: flex;
+  justify-content: center;
+}
+
+.reset {
+  width: 100px;
+}
